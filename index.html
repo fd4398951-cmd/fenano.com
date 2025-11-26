@@ -1,48 +1,163 @@
-<�doctype html>
-<html>
-
+<!DOCTYPE html>
+<html lang="es">
 <head>
-   <title> Ejercicios: hipervinculos </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empresa de Crianza de Camélidos Sudamericanos - Nuñoa</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+        }
+        header {
+            background: #5c3b1e;
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+        nav {
+            background: #3b2a1a;
+            overflow: hidden;
+        }
+        nav a {
+            float: left;
+            display: block;
+            padding: 14px 20px;
+            color: white;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background: #70502d;
+        }
+        .slider {
+            width: 100%;
+            overflow: hidden;
+        }
+        .slides {
+            display: flex;
+            width: 300%;
+            animation: slide 12s infinite;
+        }
+        .slides img {
+            width: 100%;
+        }
+        @keyframes slide {
+            0% { margin-left: 0; }
+            33% { margin-left: -100%; }
+            66% { margin-left: -200%; }
+            100% { margin-left: 0; }
+        }
+        section {
+            padding: 20px;
+            background: white;
+            margin: 20px;
+            border-radius: 10px;
+        }
+        .galeria {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 15px;
+        }
+        .galeria img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        footer {
+            background: #3b2a1a;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 20px;
+        }
+    </style>
 </head>
-
 <body>
-    <h1 id="inicio"> Hipervinculos </h1>
 
-    <h2>Hipervinculos internos</h2>
-    <a href="#final">Ir al final</a>
+<header>
+    <h1>Crianza de Camélidos Sudamericanos - Alpacas</h1>
+    <p>Empresa Familiar - Nuñoa, Melgar, Puno</p>
+</header>
 
-    <h2>Hipervinculos a otra pagina HTML</h2>
-    <a href="html-link2.html">
-    Enlace a otra pagina HTML 
-    <a/>
+<nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#nosotros">Nosotros</a>
+    <a href="#produccion">Producción</a>
+    <a href="#galeria">Galería</a>
+    <a href="#videos">Videos</a>
+    <a href="#contacto">Contacto</a>
+</nav>
 
-    <h2>Hipervinculos a un archivo</h2>
-    <a href="texto.rtf">
-    Enlace a un archivo en formato Word
-    </a>
-    <h2>Hipiervinculosa una pagina web</h2>
-    <a href="https://es.wikipedia.org/wiki/HTML">
-    Enlace a Wikipedia.Articulo HTML.
-    </a>
+<section id="inicio" class="slider">
+    <div class="slides">
+        <img src="img/slide1.jpg" alt="Alpacas en los Andes">
+        <img src="img/slide2.jpg" alt="Paisaje de Nuñoa">
+        <img src="img/slide3.jpg" alt="Crianza de Alpacas">
+    </div>
+</section>
 
-    <p style="margin-top:800px"> Separacion </p>
-   
-    <h2 id="final">Hipervinculos internos</h2>
-    <a href="#inicio">Ir al inicio</a>
+<section id="nosotros">
+    <h2>Sobre Nosotros</h2>
+    <p>
+        Somos una empresa dedicada a la crianza, selección y mejoramiento genético de alpacas en la localidad de Nuñoa,
+        reconocida por la calidad de su fibra y el manejo sostenible de los camélidos sudamericanos.
+    </p>
+    <p>
+        Nuestra misión es contribuir al desarrollo económico local, preservando la tradición ancestral de la crianza de alpacas
+        y promoviendo prácticas responsables con el medio ambiente.
+    </p>
+</section>
 
-<p>Ejemplo de una fotografia con formato
-   JPG:</P>
-<img src="beach-01.jpg" alt="Fotografia de playa">
+<section id="produccion">
+    <h2>Producción y Servicios</h2>
+    <ul>
+        <li>Crianza de alpacas Huacaya y Suri</li>
+        <li>Venta de reproductores de alta calidad genética</li>
+        <li>Clasificación y venta de fibra de alpaca</li>
+        <li>Servicios de monta y asesoría técnica</li>
+        <li>Capacitación en manejo de camélidos</li>
+    </ul>
+</section>
 
-<p>
+<section id="galeria">
+    <h2>Galería Fotográfica</h2>
+    <div class="galeria">
+        <img src="img/a1.jpg" alt="Alpaca 1">
+        <img src="img/a2.jpg" alt="Alpaca 2">
+        <img src="img/a3.jpg" alt="Crianza">
+        <img src="img/a4.jpg" alt="Fibra de Alpaca">
+        <img src="img/a5.jpg" alt="Manejo Técnico">
+        <img src="img/a6.jpg" alt="Rebaño">
+    </div>
+</section>
 
-<�--Video de Youtube insertado -->
-<iframe width="914" height="514" src="https://www.youtube.com/embed/bxKUFxAIcUo" 
-title="Los mentores de las Tres Grandes son completamente diferentes (y aqu� te explicamos por qu�).
-" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
-encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" 
-allowfullscreen></iframe>
+<section id="videos">
+    <h2>Videos Documentales</h2>
+    <video width="100%" controls>
+        <source src="videos/alpacas.mp4" type="video/mp4">
+        Tu navegador no soporta videos.
+    </video>
+    <br><br>
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+</section>
+
+<section id="contacto">
+    <h2>Contacto</h2>
+    <p><strong>Ubicación:</strong> Nuñoa, Melgar - Puno, Perú</p>
+    <p><strong>Email:</strong> empresaalpacas@nunoa.pe</p>
+    <p><strong>Teléfono / WhatsApp:</strong> +51 912 345 678</p>
+    <p>Síguenos en nuestras redes:</p>
+    <ul>
+        <li><a href="https://facebook.com" target="_blank">Facebook</a></li>
+        <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
+        <li><a href="https://youtube.com" target="_blank">YouTube</a></li>
+    </ul>
+</section>
+
+<footer>
+    <p>© 2025 Empresa de Crianza de Alpacas - Nuñoa | Todos los derechos reservados.</p>
+</footer>
 
 </body>
-
 </html>
